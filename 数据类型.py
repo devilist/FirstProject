@@ -48,7 +48,7 @@ print('\n')
 student = {'Tom', 'Jim', 'Mary', 'Tom', 'Jack', 'Rose'}
 print(student)  # 输出集合，重复的元素被自动去掉
 # 成员测试
-if ('Rose' in student):
+if 'Rose' in student:
 	print('Rose 在集合中')
 else:
 	print('Rose 不在集合中')
@@ -75,14 +75,14 @@ print(tinydict.values())  # 输出所有值
 print({x: x**2 for x in (2, 4, 6)})
 print('\n')
 
-print ("我叫 %s 今年 %d 岁!" % ('小明', 10))
+print("我叫 %s 今年 %d 岁!" % ('小明', 10))
 
 para_str = """这是一个多行字符串的实例
 多行字符串可以使用制表符
 TAB ( \t )。
 也可以使用换行符 [ \n ]。
 """
-print (para_str)
+print(para_str)
 
 
 
