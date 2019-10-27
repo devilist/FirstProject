@@ -1,11 +1,13 @@
 from typing import List
-import scrapy
+
+from scrapy import Spider
 import scrapy.selector
 from scrapyDemo.items import Article
 
 
-class ArticleSpider(scrapy.Spider):
-    name: str = "article"
+class ArticleSpider(Spider):
+    name: str = "ArticleSpider"
+
     allowed_domains: List[str] = ["wikipedia.tw.wjbk.site"]
     start_urls: List[str] = ["https://wikipedia.tw.wjbk.site/wiki/Wikipedia:首页",
                              "https://wikipedia.tw.wjbk.site/wiki/Python"]
@@ -20,4 +22,3 @@ class ArticleSpider(scrapy.Spider):
         print("Title is: " + title)
         item['title'] = title
         return item
-
